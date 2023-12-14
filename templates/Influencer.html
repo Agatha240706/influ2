@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+      {% endwith %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influenciadores</title>
+    <link rel="stylesheet" href="static/estilo.css" >
+</head>
+<body>
+    <div>
+        <h1>{{ Titulo }}</h1>
+    </div>
+    {% for Influencer in ListaInfluencer %}
+
+    <div class="influencer-card">
+        <h2> Nome: {{ Influencer.nome }}</h2>
+        <img src="/static/RedesSociais.png">
+        <p> Rede social: {{Influencer.social }}</p>
+        <p> Seguidor:{{ Influencer.seguidor }}</p>
+        <p> Area: {{ Influencer.area }}</p>
+        <br>
+        <a href="excluir/{{ Influencer.nome }}"> Excluir</a>
+        <a href="editar/{{ Influencer.nome }}"> Editar</a>
+    </div>
+
+    {% endfor %}
+
+
+</body>
+</html>

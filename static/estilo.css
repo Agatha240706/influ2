@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    background-image: url("rede.jpg");
+}
+
+.influencer-card {
+        background-color: #aeeffa;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        margin: 10px;
+}
+
+img {
+    max-width: 200px;
+}
+.bnt{
+    color: #aeeffa;
+    border-radius: 10px;
+    background-color:black;
+    margin: 10px;
+}
+
+input{
+    display: block;
+    width: calc(100% - 14px);
+    padding: 7px;
+    margin-bottom: 14px;
+}
+
+.form-group{
+    display: block;
+    width: calc(100% - 14px);
+    padding: 7px;
+    margin-bottom: 14px;
+}
